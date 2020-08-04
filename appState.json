@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "kpycli.py",
         "cursor": {
-          "lineNumber": 2,
-          "column": 5
+          "lineNumber": 1,
+          "column": 1
         },
         "config": {
           "runtime": "python3.8",
@@ -47,7 +47,15 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {}
+      "dependencies": {
+        "requests": {
+          "name": "requests",
+          "language": "python",
+          "version": "2.18.0",
+          "dev": false,
+          "notRemovable": false
+        }
+      }
     }
   },
   "PROJECT_META": {
@@ -59,7 +67,7 @@
     "platform": "AWS",
     "language": "python",
     "platformRegions": {},
-    "lastSave": 1596521672022
+    "lastSave": 1596523380359
   },
   "VCS_STATE": {
     "provider": "GitHub",
