@@ -12,6 +12,10 @@
     }
   },
   "Outputs": {
+    "cognitoTestCognito": {
+      "Description": "ID of Cognito user pool Test Cognito",
+      "Value": "us-east-1_HdYJb7Znp"
+    },
     "kpycli": {
       "Description": "ARN of Lambda function kpycli",
       "Value": {
@@ -80,7 +84,24 @@
               }
             }
           ]
-        }
+        },
+        "Policies": [
+          {
+            "PolicyName": "kpycliPolicy",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "cognito-idp:ListUsers"
+                  ],
+                  "Resource": "arn:aws:cognito-idp:us-east-1:318300609668:userpool/us-east-1_HdYJb7Znp"
+                }
+              ]
+            }
+          }
+        ]
       }
     }
   }
